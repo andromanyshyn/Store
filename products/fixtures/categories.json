@@ -1,0 +1,42 @@
+[
+  {
+    "model": "products.categories",
+    "pk": 1,
+    "fields": {
+      "name": "New",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.categories",
+    "pk": 2,
+    "fields": {
+      "name": "Clothes",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.categories",
+    "pk": 3,
+    "fields": {
+      "name": "Footwear",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.categories",
+    "pk": 4,
+    "fields": {
+      "name": "Accessories",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.categories",
+    "pk": 5,
+    "fields": {
+      "name": "Gifts",
+      "description": ""
+    }
+  }
+]

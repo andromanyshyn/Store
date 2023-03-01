@@ -1,0 +1,68 @@
+[
+  {
+    "model": "products.products",
+    "pk": 1,
+    "fields": {
+      "name": "Black hoodie with adidas Originals monograms",
+      "price": "6090.00",
+      "description": "Soft fabric for sweatshirts. Style and comfort are a way of life",
+      "image": "media/Adidas-hoodie_yFhp9Ku.png",
+      "category_id": 2
+    }
+  },
+  {
+    "model": "products.products",
+    "pk": 2,
+    "fields": {
+      "name": "Blue Jacket The North Face",
+      "price": "23725.00",
+      "description": "Smooth fabric. Waterproof coating. Light and warm down filler",
+      "image": "media/Blue-jacket-The-North-Face_NKcoqqQ.png",
+      "category_id": 1
+    }
+  },
+  {
+    "model": "products.products",
+    "pk": 3,
+    "fields": {
+      "name": "Brown sports oversized-top ASOS DESIGN",
+      "price": "3390.00",
+      "description": "Material with plush texture. Comfortable and soft",
+      "image": "media/Brown-sports-oversized-top-ASOS-DESIGN_PCHIZjm.png",
+      "category_id": 2
+    }
+  },
+  {
+    "model": "products.products",
+    "pk": 4,
+    "fields": {
+      "name": "Black Nike Heritage Backpack",
+      "price": "2340.00",
+      "description": "Dense fabric. Lightweight material",
+      "image": "media/Black-Nike-Heritage-backpack_1qkaFSi.png",
+      "category_id": 4
+    }
+  },
+  {
+    "model": "products.products",
+    "pk": 5,
+    "fields": {
+      "name": "Black platform shoes with 3 pairs of grommets Dr Martens 1461 Be",
+      "price": "13590.00",
+      "description": "Smooth leather upper. Natural material.",
+      "image": "media/Black-Dr-Martens-shoes_b52zK6t.png",
+      "category_id": 3
+    }
+  },
+  {
+    "model": "products.products",
+    "pk": 6,
+    "fields": {
+      "name": "Dark blue wide-legged strict trousers by ASOS DESIGN",
+      "price": "2890.00",
+      "description": "Lightweight elastic fabric sirsaker Textured fabric",
+      "image": "media/Dark-blue-wide-leg-ASOs-DESIGN-trousers_NsleGZ7.png",
+      "category_id": 1
+    }
+  }
+]
