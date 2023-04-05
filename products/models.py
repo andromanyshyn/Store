@@ -36,10 +36,8 @@ class BasketQuerySet(models.QuerySet):
         return sum(list_q)
 
     def total_sum(self):
-        sum_products = 0
-        for basket_object in self:
-            sum_products = sum_products + basket_object.quantity * basket_object.product.price
-        return sum_products
+        total_sum = sum([bskt_object.quantity * bskt_object.product.price for bskt_object in self])
+        return total_sum
 
 
 class Basket(models.Model):
@@ -50,7 +48,7 @@ class Basket(models.Model):
     objects = BasketQuerySet.as_manager()
 
     def __str__(self):
-        return f'Product: {self.product.name}'
+        return f'Product: {self.product.name} User: {self.user.username}'
 
     def sum(self):
         return self.quantity * self.product.price
