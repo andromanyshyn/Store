@@ -1,10 +1,9 @@
 from django import forms
-from uuid import uuid4
 from django.contrib.auth.forms import (AuthenticationForm, UserChangeForm,
                                        UserCreationForm)
-from django.utils.timezone import now
-from datetime import timedelta
-from .models import User, EmailVerifications
+
+from .models import User
+from .tasks import send_email_verification
 
 
 class UserRegistrationForm(UserCreationForm):
@@ -28,10 +27,8 @@ class UserRegistrationForm(UserCreationForm):
     }))
 
     def save(self, commit=True):
-        user = super(UserRegistrationForm, self).save(commit=True)
-        expiration = now() + timedelta(hours=48)
-        email_object = EmailVerifications.objects.create(user_id=user, code=uuid4(), expiration=expiration)
-        email_object.sending_email()
+        user = super().save(commit=True)
+        send_email_verification.delay(user.id)
         return user
 
     class Meta:
