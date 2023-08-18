@@ -19,8 +19,8 @@ class Products(models.Model):
     name = models.CharField(max_length=64)
     price = models.DecimalField(max_digits=7, decimal_places=2)
     description = models.TextField()
-    image = models.ImageField(upload_to='media')
-    category_id = models.ForeignKey(to=Categories, on_delete=models.CASCADE, verbose_name='category')
+    image = models.ImageField(upload_to='media', null=True, blank=True)
+    category = models.ForeignKey(to=Categories, on_delete=models.CASCADE, verbose_name='category')
 
     class Meta:
         verbose_name = 'products'

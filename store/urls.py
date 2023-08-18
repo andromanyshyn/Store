@@ -20,10 +20,11 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('products.urls'), name='index'),
     path('users/', include('users.urls')),
     path('accounts/', include('allauth.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
+    path('', include('products.urls'), name='index'),
+    path('api/v1/', include('store.api_urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
